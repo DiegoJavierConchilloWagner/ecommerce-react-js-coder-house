@@ -1,6 +1,8 @@
-import './App.css';
-import Navbar from "./components/Navbar/navbar"
-import ItemListContainer from "./components/Navbar/ItemListContainer"
+import "./App.css";
+import Navbar from "./components/Navbar/navbar";
+import ItemListContainer from "./components/Navbar/ItemListContainer";
+import Footer from "./components/Footer/Footer";
+import ItemCount from "./components/count/ItemCount";
 
 function App() {
   return (
@@ -9,25 +11,14 @@ function App() {
         <Navbar />
       </header>
       <main>
-      <ItemListContainer greeting="Hola Usuario"/>
-      </main>
+        <ItemListContainer greeting="Hola Usuario" />
 
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
-      <h1>Hola Mundooo!</h1>
+        <ItemCount />
+        
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

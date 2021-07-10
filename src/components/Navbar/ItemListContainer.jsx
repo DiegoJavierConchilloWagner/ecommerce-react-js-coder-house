@@ -1,10 +1,10 @@
 import React from "react";
 import "./navbar.css"
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({greeting}) => {
 
     return (
-        <p>{props.greeting}</p>
+        <p>{greeting}</p>
     )
 };
 

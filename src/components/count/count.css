@@ -1,0 +1,12 @@
+.contador{
+    display: flex;
+}
+.menor{
+    color: red;
+}
+.mayor{
+    color: green;
+}
+.contador button{
+    margin: 0px 0.5rem;
+}

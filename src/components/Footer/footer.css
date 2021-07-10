@@ -1,0 +1,246 @@
+/*-------------------------Inicio Footer--------------------------*/
+.footer {
+    margin-top: 30px;
+}
+
+.footer .footer__seccion {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 2.525em 6.25em;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .footer__seccion .footer__contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footer .footer__seccion .footer__contenedor ul {
+    padding: 0;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda {
+    margin-right: 2.875rem;
+    width: 35%;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos {
+    margin-top: 1.25em;
+    display: flex;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos li {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos li a {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    background: #870f94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .625em;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos li a:hover {
+    background: #50c9ce;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos li a .fa {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__appLogo img {
+    width: 140px;
+    filter: grayscale(100%);
+}
+
+.footer .footer__seccion .footer__contenedor .footer__izquierda .footer__appLogo img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-5px);
+    transition: transform 0.5s;
+}
+
+.footer .footer__seccion .footer__contenedor h2 {
+    position: relative;
+    color: #870f94;
+    font-weight: 31.25em;
+    margin-bottom: .9375em;
+}
+
+.footer .footer__seccion .footer__contenedor h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 3.125em;
+    height: 2px;
+    background: #50c9ce;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__medio {
+    position: relative;
+    width: 25%;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__medio ul li {
+    list-style: none;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__medio ul li a {
+    color: #999;
+    text-decoration: none;
+    margin-bottom: .625em;
+    display: inline-block;
+    font-size: 1.2625rem;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__medio ul li a:hover {
+    color: #50c9ce;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha {
+    width: calc(35% - 60px);
+    margin-right: 0;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto {
+    position: relative;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto li {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto li span {
+    color: #999;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto li span:nth-child(1) {
+    color: #870f94;
+    font-size: 1.25rem;
+    margin-right: .625rem;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto li a {
+    color: #999;
+}
+
+.footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto li a:hover {
+    color: #50c9ce;
+}
+
+.footer .footer__seccion p {
+    color: #999;
+}
+
+.footer .footer__copyRightText {
+    width: 100%;
+    background: #e9e9e9;
+    padding: 5px 6.25em;
+    text-align: center;
+    color: #999;
+}
+
+.footer .footer__copyRightText p {
+    padding-top: 12px;
+}
+
+/*-------------------------------------------*/
+/*------------------------------------------------- @media Footer ------------------------------------------------------*/
+@media (max-width: 991px) {
+    .footer .footer__seccion .footer__contenedor {
+        flex-direction: column;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__izquierda {
+        margin-right: 0;
+        margin-bottom: 2.5em;
+        width: 100%;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos {
+        padding-left: 0px;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__medio {
+        width: 100%;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__derecha {
+        width: 100%;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto {
+        padding-left: 0;
+    }
+
+    .footer .footer__copyRightText {
+        padding: .5em 2.5em;
+    }
+
+    .fila-Filtro h2 {
+        margin-right: 5px;
+    }
+
+    .fila-Filtro label {
+        margin-right: 4px;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer .footer__seccion {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 2.525em 2.75em;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer .footer__seccion .footer__contenedor {
+        flex-direction: column;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__izquierda {
+        margin-right: 0;
+        margin-bottom: 2.5em;
+        width: 100%;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__izquierda .footer__iconos {
+        padding-left: 0px;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__medio {
+        width: 100%;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__derecha {
+        width: 100%;
+    }
+
+    .footer .footer__seccion .footer__contenedor .footer__derecha .informacionContacto {
+        padding-left: 0;
+    }
+
+    .footer .footer__copyRightText {
+        padding: .5em 2.5em;
+    }
+}
+
+/*------------------------------------------------- Fin @media Footer ------------------------------------------------------*/
