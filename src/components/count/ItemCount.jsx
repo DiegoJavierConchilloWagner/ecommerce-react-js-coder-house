@@ -12,8 +12,8 @@ const ItemCount = () => {
     return (
         <div>
             <div className="contador">
-                <h1 className={contador <= 0 ? "menor" : "mayor"}>Contador: {contador}{" "}</h1>
-                <hr />
+                <h1 className={contador <= 0 ? "menor" : "mayor"}>Contador: {contador}</h1>
+                <br />
 
                 <button onClick={disminuir}>Disminuir</button>
                 <button onClick={aumentar}>Aumentar</button>

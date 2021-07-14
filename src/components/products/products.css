@@ -1,0 +1,241 @@
+  
+  .filaP {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 38px 0 0 0; }
+  
+  .fila-2 {
+    justify-content: space-between; }
+  
+  select {
+    border: 1px solid black;
+    padding: 5px; }
+    select:focus {
+      outline: none; }
+  
+  .paginaBoton {
+    margin: 80px auto 80px; }
+    .paginaBoton span {
+      display: inline-block;
+      border: 1px solid black;
+      margin-left: 10px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer; }
+      .paginaBoton span:hover {
+        background: black;
+        color: #fff; }
+  
+  .borde {
+    border-top: 1px solid #e9e9e9; }
+  
+  .boton2 {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.5s; }
+  
+  .filaM {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 8px 0 0 0; }
+  
+  /*-------------------------------Filtro De Productos---------------------*/
+  .contenedorChico {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px; }
+  .contenedorFiltro {
+    padding: 88px 0 0 0; }
+    .contenedorFiltro img {
+      max-width: 250px;
+      max-height: 250px; }
+    .contenedorFiltro .bordeC {
+      width: 980px;
+      height: 2px;
+      background: rgba(221, 221, 221, 0.9); }
+    .contenedorFiltro h1 {
+      margin-right: 15px;
+      font-weight: 800; }
+    .contenedorFiltro label {
+      display: inline-block;
+      margin-right: 0.1875rem;
+      margin-bottom: 0.5rem;
+      margin-left: 0.1875rem;
+      padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
+      border-radius: 7px;
+      background-color: #f1f4f7;
+      color: #7b7e85;
+      font: 500 1rem/1.25rem "Montserrat", sans-serif;
+      cursor: pointer;
+      transition: all 0.2s ease; }
+      .contenedorFiltro label:hover {
+        background: #9f069775; }
+    .contenedorFiltro a {
+      color: #fff; }
+    .contenedorFiltro input[type="radio"] {
+      display: none;
+      cursor: pointer; }
+    .contenedorFiltro input[type="radio"]:checked + label {
+      padding: 5px 15px;
+      background: #9f0698;
+      border-radius: 20px;
+      color: #fff; }
+      .contenedorFiltro input[type="radio"]:checked + label:before {
+        display: none; }
+  
+  .fila-Filtro {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; }
+    .fila-Filtro h2 {
+      text-align: center; }
+    .fila-Filtro label {
+      margin-right: 20px; }
+  
+  #Perros:checked ~ #categorias .gatos {
+    display: none; }
+  
+  #Perros:checked ~ #categorias .premium {
+    display: none; }
+  
+  #Perros:checked ~ #categorias .promociones {
+    display: none; }
+  
+  #Perros:checked ~ #categorias .todos {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .perros {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .promociones {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .premium {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .todos {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .perros {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .gatos {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .promociones {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .todos {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .perros {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .gatos {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .todos {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .premium {
+    display: none; }
+  
+  /*--------------------------------*/
+  /* Filtro de categorias */
+  
+  #Todos:checked ~ #categorias .filtroPerros {
+    display: none; }
+  
+  #Todos:checked ~ #categorias .filtroPremium {
+    display: none; }
+  
+  #Todos:checked ~ #categorias .filtroGatos {
+    display: none; }
+  
+  #Todos:checked ~ #categorias .filtroPromociones {
+    display: none; }
+  
+  
+  
+  
+  #Perros:checked ~ #categorias .filtroTodos {
+    display: none; }
+  
+  #Perros:checked ~ #categorias .filtroPremium {
+    display: none; }
+  
+  #Perros:checked ~ #categorias .filtroGatos {
+    display: none; }
+  
+  #Perros:checked ~ #categorias .filtroPromociones {
+    display: none; }
+  
+  
+  
+  
+  #Gatos:checked ~ #categorias .filtroPerros {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .filtroPremium {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .filtroTodos {
+    display: none; }
+  
+  #Gatos:checked ~ #categorias .filtroPromociones {
+    display: none; }
+  
+  
+  
+  
+  
+  #Premium:checked ~ #categorias .filtroPerros {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .filtroTodos {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .filtroGatos {
+    display: none; }
+  
+  #Premium:checked ~ #categorias .filtroPromociones {
+    display: none; }
+  
+  
+  
+  #Promociones:checked ~ #categorias .filtroPerros {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .filtroTodos {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .filtroGatos {
+    display: none; }
+  
+  #Promociones:checked ~ #categorias .filtroPremium {
+    display: none; }
+  
+  .filter{
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+    /* transition: all 0s ease-out; */
+  }
+  .card-filter{
+    outline: none;
+  }
+  /*-----------------------------------------------------------------------------------------------------------------------------*/

@@ -1,8 +1,11 @@
 import "./App.css";
 import Navbar from "./components/Navbar/navbar";
-import ItemListContainer from "./components/Navbar/ItemListContainer";
+// import ItemListContainer from "./components/Navbar/ItemListContainer";
 import Footer from "./components/Footer/Footer";
 import ItemCount from "./components/count/ItemCount";
+// import ItemList from "./components/itemListContainer/itemList";
+// import ItemListContainer from "./components/itemListContainer/itemListContainer";
+import Products from "./components/products/products"
 
 function App() {
   return (
@@ -11,10 +14,13 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <ItemListContainer greeting="Hola Usuario" />
-
+        {/* <ItemListContainer/> */}
+        <br />
         <ItemCount />
-        
+        <br /><br />
+        <Products />
+        <br />
+        {/* <ItemList /> */}
       </main>
       <footer>
         <Footer />
