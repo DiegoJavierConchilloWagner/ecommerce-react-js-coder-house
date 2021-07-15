@@ -19,7 +19,7 @@ function Products() {
                     <label htmlFor="Promociones">Promociones</label>
                     <div className="bordeC" />
                     <div id="categorias">
-                        <div className>
+                        <div>
                             <div className="contenedorChico">
                                 <div className="filaP fila-2">
                                     <div id="sections">
@@ -29,11 +29,11 @@ function Products() {
                                         <h2 className="filtroPremium">Premium</h2>
                                         <h2 className="filtroPromociones">Promociones</h2>
                                     </div>
-                                    {/* <input type="search" placeholder="Buscar..." className="card-filter" /> */}
+                                    <input type="search" placeholder="Buscar..." className="card-filter" />
                                 </div>
-                                <div className="filaP">
+                                
                                     <ItemListContainer />
-                                </div>
+                                
                                 <div className="paginaBoton">
                                     <span>1</span>
                                     <span>2</span>

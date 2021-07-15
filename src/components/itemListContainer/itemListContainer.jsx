@@ -35,13 +35,13 @@ export const ItemListContainer = () => {
     }, []);
 
     return (
-   
-        <div>
+        
+        <div className="filaP">
             {items.length === 0 ? (
                 <h3>Cargando...</h3>
             ) : (
                 items.map((el) => (
-                <ItemList id={el.id} cat={el.cat} name={el.name} image={el.img} price={el.price} cantidad={el.cantidad} />
+                    <ItemList key={el.id} id={el.id} cat={el.cat} name={el.name} img={el.img} price={el.price} cantidad={el.cantidad} />
                 ))
             )}
         </div>

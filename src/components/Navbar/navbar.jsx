@@ -1,4 +1,4 @@
-import React , {useEffect} from "react";
+import React , {useEffect, useRef} from "react";
 import Cart from "./Cart/CartWidget"
 import "./navbar.css"
 
@@ -6,16 +6,17 @@ import "./navbar.css"
 const Navbar = (scrollTop) => {
     const addToCart = () => alert('Producto agregado al carrito.');
     //navbar animation 
+    let refNav = useRef();
     const handleScroll = () => {
         const d = document;
         const w = window;
-        const scrollBtn = d.querySelector("nav");
+        // const scrollBtn = d.querySelector("nav");
         let scrollTop = w.pageYOffset || d.documentElement.scrollTop;
 
         if (scrollTop > 40) {
-            scrollBtn.classList.add("scroll")
+            refNav.current.classList.add("scroll")
         }else if (scrollTop <= 40) {
-            scrollBtn.classList.remove("scroll")
+            refNav.current.classList.remove("scroll")
         }
     }
     useEffect(() => {
@@ -26,7 +27,7 @@ const Navbar = (scrollTop) => {
     },[]);
     
     return (
-        <nav>
+        <nav ref={refNav}>
             <input id="nav-toggle" type="checkbox" />
             <div className="logo"><strong>PetHouse</strong></div>
             <ul className="links">
