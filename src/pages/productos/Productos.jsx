@@ -1,6 +1,6 @@
 import React from "react";
 import "./products.css";
-import ItemListContainer from "../itemListContainer/itemListContainer";
+import ItemListContainer from "../../components/itemListContainer/itemListContainer";
 
 function Products() {
     return (
@@ -17,7 +17,7 @@ function Products() {
                     <label htmlFor="Premium">Premium</label>
                     <input type="radio" name="filtro" id="Promociones" className="input" />
                     <label htmlFor="Promociones">Promociones</label>
-                    <div className="bordeC" />
+                    <div className="bordeC"></div> 
                     <div id="categorias">
                         <div>
                             <div className="contenedorChico">
@@ -31,9 +31,9 @@ function Products() {
                                     </div>
                                     <input type="search" placeholder="Buscar..." className="card-filter" />
                                 </div>
-                                
+                                <div className="filaP">
                                     <ItemListContainer />
-                                
+                                </div>
                                 <div className="paginaBoton">
                                     <span>1</span>
                                     <span>2</span>
@@ -42,7 +42,7 @@ function Products() {
                                     <span>→</span>
                                 </div>
                             </div>
-                            <div className="borde" />
+                            <div className="borde"></div>
                         </div>
                         {/*-----------------------------------------------------------------------------------------------*/}
                     </div>

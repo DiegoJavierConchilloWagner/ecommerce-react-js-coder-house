@@ -10,11 +10,15 @@ nav {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 5%;
 	height: 100px;
-	background-color: #3e65da85;
+	background-color: #ffffff91; ;
 	transition: all 0.3s ease-out;
 }
 .scroll{
 	height: 60px;
+	background-color: #fff;
+}
+nav .links .active{
+	color: #e901dd;
 }
 nav .logo {
 	float: left;
@@ -23,7 +27,7 @@ nav .logo {
 	display: flex;
 	align-items: center;
 	font-size: 24px;
-	color: #fff;
+	color: #9F0698;
 }
 nav .links {
 	float: right;
@@ -43,15 +47,16 @@ nav .links a {
 	padding: 1em;
 	font-size: 16px;
 	font-weight: bold;
-	color: #fff;
+	color: #9F0698;
+	font-weight: 600;
 	text-decoration: none;
     transition: all 1s;
 }
 nav .links a:hover{
-    color: royalblue;
+    color: #e901dd;
 }
 nav .links a::before{
-    color: royalblue;
+    color: #e901dd;
 }
 #nav-toggle {
 	position: absolute;
@@ -67,7 +72,7 @@ nav .icon-burger {
 nav .icon-burger .line {
 	width: 30px;
 	height: 5px;
-	background-color: #fff;
+	background-color: #9F0698;
 	margin: 5px;
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
@@ -121,13 +126,13 @@ nav .icon-burger .line {
     cursor: pointer;
 }
 .cart i {
-    color: #fff;
+    color: #9F0698;
     cursor: pointer;
     font-size: 18px;
     /* transform: scaleX(-1); */
     transition: all .6s;
 }
 .cart i:hover,.cart button:hover i {
-    color: royalblue;
+    color: #9F0698;
     transform: rotate(360deg);
 }

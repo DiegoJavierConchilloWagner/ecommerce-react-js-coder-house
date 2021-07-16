@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from "./itemList"
+import Spinner from 'react-bootstrap/Spinner'
+
 export const ItemListContainer = () => {
     const [items, setItems] = useState([]);
-
     useEffect(() => {
-        setTimeout(function(){ const getItems = async (url) => {
+        // setTimeout(function(){ 
+            const getItems = async (url) => {
             let res = await fetch(url),
             json = await res.json(),
             data = json.dataProduct;
@@ -25,26 +27,25 @@ export const ItemListContainer = () => {
                 setItems((items) => [...items,item],
                 console.log(item));
             });
-                // setPokemons((pokemons) => [...pokemons, pokemon]);
-            
         };
-    
         getItems("https://diegojavierconchillowagner.github.io/Json/js/data.json");
-        }, 2000);
         
     }, []);
 
     return (
         
-        <div className="filaP">
+        <>
             {items.length === 0 ? (
-                <h3>Cargando...</h3>
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+                // <h3>Cargando...</h3>
             ) : (
                 items.map((el) => (
-                    <ItemList key={el.id} id={el.id} cat={el.cat} name={el.name} img={el.img} price={el.price} cantidad={el.cantidad} />
+                    <ItemList key={el.id} id={el.id} cat={el.cat} name={el.name} img={el.img} price={el.price} cantidad={el.cantidad} descripcion={el.descripcion} longDesc={el.longDesc} />
                 ))
             )}
-        </div>
+        </>
       
     )
 }
