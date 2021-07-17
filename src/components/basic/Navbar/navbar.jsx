@@ -32,7 +32,7 @@ const Navbar = (scrollTop) => {
             <input id="nav-toggle" type="checkbox" />
             <div className="logo"><strong>PetHouse</strong></div>
             <ul className="links">
-                <li><NavLink exact to="/inicio" activeClassName="active">Inicio</NavLink></li>
+                <li><NavLink exact to="/" activeClassName="active">Inicio</NavLink></li>
                 <li><NavLink exact to="/productos" activeClassName="active">Productos</NavLink></li>
                 <li><NavLink exact to="/preguntas" activeClassName="active">Preguntas</NavLink></li>
                 <li><NavLink exact to="/nosotros" activeClassName="active">Nosotros</NavLink></li>

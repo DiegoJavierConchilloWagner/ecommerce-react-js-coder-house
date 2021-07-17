@@ -2,13 +2,6 @@ import React  from "react";
 import { Link } from "react-router-dom";
 import "./productItems.css"
 function ItemList({ id,cat,name,img,price,cantidad }) {
-  // const [state, setState] = useState("");
-
-  // const url = "https://diegojavierconchillowagner.github.io/dataJson/js/data.json";
-
-  // fetch(url)
-  // .then((res) => res.json())
-  // .then((data) => console.log(data[0].dataProduct))
 
     return (
             <div className={`columna-4 ${cat}`}>

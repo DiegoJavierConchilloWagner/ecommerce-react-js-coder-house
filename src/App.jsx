@@ -17,7 +17,7 @@ function App() {
         </header>
         <main>
           <Switch>
-            <Route exact path="/inicio" component={Inicio} />
+            <Route exact path="/" component={Inicio} />
             <Route exact path="/productos" component={Productos} />
             <Route exact path="/productos-detalle" component={Detalle} />
             <Route exact path="/preguntas" />

@@ -1,14 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import { useLocation } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner'
+import 'bootstrap/dist/css/bootstrap.css';
 import Details from './Details';
 
 const DetailsContainer = () => {
-    const url = "https://diegojavierconchillowagner.github.io/Json/js/data.json"
     let {search} = useLocation();
-    let query = new URLSearchParams(search)
-    let id = parseInt(query.get("id"))
+    let query = new URLSearchParams(search);
+    let id = parseInt(query.get("id"));
+    const url = "https://diegojavierconchillowagner.github.io/Json/js/data.json";
     const [items, setItems] = useState([]);
+    
     useEffect(() => {
             const getItems = async (url) => {
             let res = await fetch(url),
@@ -30,10 +32,6 @@ const DetailsContainer = () => {
                     setItems((items) => [...items,item],
                     console.log(item));
                 }
-                // console.log(el.id)
-                
-                // console.log(item)
-                
             });     
         };
         getItems(url);   
