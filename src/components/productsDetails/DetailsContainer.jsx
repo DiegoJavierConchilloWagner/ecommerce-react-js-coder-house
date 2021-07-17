@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { useLocation } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner'
 import 'bootstrap/dist/css/bootstrap.css';
-import Details from './Details';
+import DetailsList from './DetailsList';
 
 const DetailsContainer = () => {
     let {search} = useLocation();
@@ -44,9 +44,7 @@ const DetailsContainer = () => {
                     <span className="visually-hidden">Loading...</span>
                 </Spinner>
             ) : (
-                items.map((el) =>  (
-                    <Details key={el.id} id={el.id} cat={el.cat} name={el.name} img={el.img} price={el.price} cantidad={el.cantidad} descripcion={el.descripcion} longDesc={el.longDesc}/>
-                ))
+                <DetailsList items={items} />
             )}
         </>
     )

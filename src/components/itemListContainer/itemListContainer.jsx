@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ItemList from "./itemList"
 import Spinner from 'react-bootstrap/Spinner'
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const ItemListContainer = () => {
     const [items, setItems] = useState([]);
@@ -33,7 +34,6 @@ export const ItemListContainer = () => {
     }, []);
 
     return (
-        
         <>
             {items.length === 0 ? (
                 <Spinner animation="border" role="status">
@@ -41,12 +41,9 @@ export const ItemListContainer = () => {
                 </Spinner>
                 // <h3>Cargando...</h3>
             ) : (
-                items.map((el) => (
-                    <ItemList key={el.id} id={el.id} cat={el.cat} name={el.name} img={el.img} price={el.price} cantidad={el.cantidad} descripcion={el.descripcion} longDesc={el.longDesc} />
-                ))
+                <ItemList items={items} />
             )}
         </>
-      
     )
 }
 

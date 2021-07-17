@@ -3,7 +3,7 @@ import React from 'react'
 const Details = ({id,cat,name,img,price,cantidad,descripcion,longDesc}) => {
     return (
         <>
-            <div className="columna-2">
+            <div className="columna-2D">
                 <img src={img} id="imgProducto" alt={name} />
                 <div className="filaImgChica">
                     <div className="columnaImgChica">

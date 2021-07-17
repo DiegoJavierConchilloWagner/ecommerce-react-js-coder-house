@@ -8,17 +8,15 @@ import "swiper/components/pagination/pagination.min.css"
 import "swiper/components/navigation/navigation.min.css"
 // import Swiper core and required modules
 
-import SwiperCore, {
-  Pagination,Navigation
-} from 'swiper/core';
+import SwiperCore, {Pagination,Navigation,Autoplay} from 'swiper/core';
 
 // install Swiper modules
-SwiperCore.use([Pagination,Navigation]);
+SwiperCore.use([Pagination,Navigation,Autoplay]);
 
 const Carrousel = () => {
   return (
     <>
-      <Swiper slidesPerView={1} spaceBetween={30} loop={true} pagination={{
+      <Swiper autoplay={{delay: 2500,disableOnInteraction: false}} slidesPerView={1} spaceBetween={30} loop={true} pagination={{
         "clickable": true }} navigation={true} className="mySwiper">
         <SwiperSlide><img src="https://res.cloudinary.com/doejsqlbl/image/upload/v1626420608/reactJs/Carrousel/slider1_kgtrb7.jpg" alt="" /></SwiperSlide>
         <SwiperSlide><img src="https://res.cloudinary.com/doejsqlbl/image/upload/v1626420608/reactJs/Carrousel/slider_hu6g7i.jpg" alt="" /></SwiperSlide>

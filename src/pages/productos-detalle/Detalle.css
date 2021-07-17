@@ -1,11 +1,11 @@
-.fila {
+.filaD {
   display: flex;
   align-items: center;
   flex-wrap: wrap; }
-  .fila .filaImgChica {
+  .filaD .filaImgChica {
     padding: 88px 0 0 0;
     margin-bottom: 10%; }
-.fila-2 {
+.fila-2D {
     justify-content: space-between; }
 .relatedProducts{
     text-decoration: none;
@@ -49,7 +49,7 @@
     outline: none; 
 }
 #imgProducto {
-    height: 440px; 
+    max-height: 460px; 
 }
 .filaImgChica {
     display: flex;
@@ -66,27 +66,29 @@
     padding-left: 25px;
     padding-right: 25px; }
 
-.columna-2 {
+.columna-2D {
   flex-basis: 50%;
   min-width: 300px;
   margin-top: 50px;
   margin-bottom: 50px; }
-  .columna-2 a {
+  .columna-2D a {
     color: #fff; }
-  .columna-2 p {
+  .columna-2D p {
     color: #212529; }
-  .columna-2 img {
+  .columna-2D img {
     max-width: 100%;
-    padding: 50px 0; }
-  .columna-2 h3 {
+     }
+  .columna-2D h3 {
     font-size: 30px;
     line-height: 60px; }
-  .columna-2 .ofertaImg {
-    padding: 50px; }
+  /* .columna-2D .ofertaImg {
+    padding: 50px; } */
 
 .columna-2M {
   flex-basis: 50%;
-  min-width: 300px; }
+  min-width: 300px;
+  
+ }
   .columna-2M a {
     color: #fff; }
   .columna-2M p {
@@ -102,23 +104,23 @@
     padding: 50px; }
 
 @media only screen and (max-width: 887px) {
-  .productoUnico .fila {
+  .productoUnico .filaD {
     text-align: left; }
-  .productoUnico .columna-2 {
+  .productoUnico .columna-2D {
     padding: 20px 0; }
-    .productoUnico .columna-2 #imgProducto {
+    .productoUnico .columna-2D #imgProducto {
       height: 300px;
       display: block;
       margin-left: auto;
       margin-right: auto; } }
 @media only screen and (max-width: 650px) {
-.fila {
+.filaD {
     text-align: center; }
   .filaM {
     text-align: center; }
-  .columna-2 {
+  .columna-2D {
     flex-basis: 100%; }
-    .columna-2 .ofertaImg {
+    .columna-2D .ofertaImg {
       padding: 0px;
       margin-bottom: -80px; }
   .columna-2M {
@@ -130,11 +132,11 @@
     flex-basis: 100%; }
   .columna-4 .columna-5 {
     flex-basis: 100%; }
-  .productoUnico .fila {
+  .productoUnico .filaD {
     text-align: left; }
-  .productoUnico .columna-2 {
+  .productoUnico .columna-2D {
     padding: 20px 0; }
-    .productoUnico .columna-2 #imgProducto {
+    .productoUnico .columna-2D #imgProducto {
       height: 300px;
       display: block;
       margin-left: auto;

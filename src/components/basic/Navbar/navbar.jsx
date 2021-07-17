@@ -1,5 +1,5 @@
 import React , {useEffect, useRef} from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import Cart from "./Cart/CartWidget"
 import "./navbar.css"
 
@@ -30,7 +30,7 @@ const Navbar = (scrollTop) => {
     return (
         <nav ref={refNav}>
             <input id="nav-toggle" type="checkbox" />
-            <div className="logo"><strong>PetHouse</strong></div>
+            <Link exact to="/"><div className="logo"><strong>PetHouse</strong></div></Link>
             <ul className="links">
                 <li><NavLink exact to="/" activeClassName="active">Inicio</NavLink></li>
                 <li><NavLink exact to="/productos" activeClassName="active">Productos</NavLink></li>

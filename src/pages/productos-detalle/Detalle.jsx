@@ -8,14 +8,14 @@ const Detalle = () => {
         <>
             {/*--------------------contenido---------------------------*/}
             <div className="contenedorChico productoUnico">
-                <div className="fila" id="res">
+                <div className="filaD" id="res">
                     {/*-----------------Contenido-------------------*/}
                     <DetailsContainer />
                 </div>
             </div>
             {/*-------------Titulo-----------*/}
             <div className="contenedorChico">
-                <div className="fila fila-2">
+                <div className="filaD fila-2D">
                     <h2>Productos Relacionados</h2>
                     <a className="relatedProducts" href="productos.html">Ver Mas</a>
                 </div>

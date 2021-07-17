@@ -1,30 +1,11 @@
 import React  from "react";
-import { Link } from "react-router-dom";
-import "./productItems.css"
-function ItemList({ id,cat,name,img,price,cantidad }) {
+import Item from "./Item/Item";
+function ItemList({ items }) {
 
     return (
-            <div className={`columna-4 ${cat}`}>
-                <div className="tarjetaPC">
-                    <div className="imgBxPc">
-                        <img src={img} alt={name} />
-                    </div>
-                    <div className="contenidoBxPc">
-                        <h2>{name}</h2>
-                        <div className="ranking">
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                            <i className="fa fa-star"></i>
-                        </div>
-                        <h2 className="precioPc">{price}</h2>
-                        <Link to={`/productos-detalle?id=${id}`}><small>Ver Detalle</small></Link>
-                        
-                        <a className="comprarPc" href="#?">Comprar!</a>
-                    </div>
-                </div>
-            </div>
+        items.map((el) => (
+            <Item key={el.id} id={el.id} cat={el.cat} name={el.name} img={el.img} price={el.price} cantidad={el.cantidad} descripcion={el.descripcion} longDesc={el.longDesc}/>
+        ))
     );
 }
 
