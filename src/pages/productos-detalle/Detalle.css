@@ -1,9 +1,10 @@
 .filaD {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap; }
   .filaD .filaImgChica {
-    padding: 88px 0 0 0;
+    padding: 0;
     margin-bottom: 10%; }
 .fila-2D {
     justify-content: space-between; }
@@ -60,8 +61,8 @@
     cursor: pointer; 
 }
 /* ............. */
-.contenedorChico {
-    max-width: 1080px;
+.contenedorChicoD {
+    max-width: 1380px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px; }
@@ -87,13 +88,19 @@
 .columna-2M {
   flex-basis: 50%;
   min-width: 300px;
-  
+  margin-top: 2rem;
  }
   .columna-2M a {
     color: #fff; }
-  .columna-2M p {
+    
+  .columna-2M .columna-2MP {
     color: #212529;
-    padding-top: 50px; }
+    padding-top: 50px; 
+  }
+  .columna-2M .longDesc{
+    color: #212529;
+    margin-bottom: 30px;
+  }
   .columna-2M img {
     max-width: 100%;
     padding: 50px 0; }
@@ -128,6 +135,9 @@
     .columna-2M .ofertaImg {
       padding: 0px;
       margin-bottom: -80px; }
+      .columna-2M .columna-2MP{
+        padding-top: 10px;
+      }
   .columna-3 {
     flex-basis: 100%; }
   .columna-4 .columna-5 {

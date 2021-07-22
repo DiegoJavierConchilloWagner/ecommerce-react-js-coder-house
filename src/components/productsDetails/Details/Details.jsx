@@ -21,7 +21,7 @@ const Details = ({id,cat,name,img,price,cantidad,descripcion,longDesc}) => {
                 </div>
             </div>
             <div className="columna-2M">
-                <p>Inicio / {cat} / {name}</p>
+                <p className="columna-2MP">Inicio / {cat} / {name}</p>
                 <h1>{name}</h1>
                 <h2>${price}</h2>
                 <select>
@@ -35,7 +35,7 @@ const Details = ({id,cat,name,img,price,cantidad,descripcion,longDesc}) => {
                 <input className="inputDetalleProd" type="number" defaultValue={1} />
                 <a href="carrito.html" className="boton">Agregar al carrito</a>
                 <h3>Detalles del producto <i className="fa fa-indent" /></h3>
-                <p>{longDesc} </p>
+                <p className="longDesc">{longDesc} </p>
             </div>
         </>
     )

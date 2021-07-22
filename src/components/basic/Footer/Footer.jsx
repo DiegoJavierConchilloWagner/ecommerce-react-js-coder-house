@@ -1,5 +1,5 @@
 import React from "react";
-// import Cart from "./CartWidget"
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const Footer = (props) => {
@@ -34,19 +34,19 @@ const Footer = (props) => {
             <h2>Links</h2>
             <ul>
               <li>
-                <a href="index.html">Inicio</a>
+                <Link to="/">Inicio</Link>
               </li>
               <li>
-                <a href="productos.html">Productos</a>
+                <Link to="/productos">Productos</Link>
               </li>
               <li>
-                <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+                <Link to="/preguntas">Preguntas Frecuentes</Link>
               </li>
               <li>
-                <a href="quienes-somos.html">Quienes Somos</a>
+                <Link to="/nosotros">Quienes Somos</Link>
               </li>
               <li>
-                <a href="contacto.html">Contacto</a>
+                <Link to="/contacto">Contacto</Link>
               </li>
             </ul>
           </div>

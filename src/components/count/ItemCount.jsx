@@ -1,23 +1,17 @@
 import React , {useState} from 'react';
 import "./count.css";
 
-const ItemCount = () => {
+const ItemCount = ({cantidad}) => {
 
     const [contador, setContador] = useState(1);
 
-    const aumentar = () => contador < 5 ? setContador(contador + 1) : setContador(contador);
-    const disminuir = () => contador <= 0 ? setContador(contador) : setContador(contador - 1)
+    const aumentar = () => contador < cantidad && setContador(contador + 1) 
+    const disminuir = () => contador > 1 && setContador(contador -1) 
         
 
     return (
-        <div>
-            <div className="contador">
-                <h1 className={contador <= 0 ? "menor" : "mayor"}>Contador: {contador}</h1>
-                <br />
-
-                <button onClick={disminuir}>Disminuir</button>
-                <button onClick={aumentar}>Aumentar</button>
-            </div>
+        <div className="addAndRemoveButton">
+            <button className="removeButton" onClick={disminuir}>-</button><p>{contador}</p><button className="addButton" onClick={aumentar}>+</button>
         </div>
     )
 }

@@ -120,19 +120,19 @@ nav .icon-burger .line {
 	}
 }
 /* CART */
-.cart button{
+.carrito button{
     border: none;
     background: none;
     cursor: pointer;
 }
-.cart i {
+.carrito i {
     color: #9F0698;
     cursor: pointer;
     font-size: 18px;
     /* transform: scaleX(-1); */
     transition: all .6s;
 }
-.cart i:hover,.cart button:hover i {
+.carrito i:hover,.cart button:hover i {
     color: #9F0698;
     transform: rotate(360deg);
 }

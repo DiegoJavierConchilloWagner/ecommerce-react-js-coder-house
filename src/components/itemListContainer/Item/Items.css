@@ -9,7 +9,7 @@
 .tarjetaPC::before {
     content: '';
     position: absolute;
-    top: -50%;
+    top: -56%;
     width: 100%;
     height: 100%;
     background: #f1f1f1;
@@ -60,7 +60,8 @@
     z-index: 1; 
 }
 .tarjetaPC .contenidoBxPc a {
-    text-decoration: none; 
+    text-decoration: none;
+    margin-top: 10px; 
 }
 .tarjetaPC .contenidoBxPc h2 {
     font-size: 20px;
@@ -136,4 +137,42 @@ color: #870f94;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%); 
+}
+.columna-4 .tarjetaPC .contenidoBxPc small:hover{
+    color: #870f94;
+    transition: all 0.3s ease-in-out;
+}
+.columna-4 .tarjetaPC .contenidoBxPc .addAndRemoveButton{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.columna-4 .tarjetaPC .contenidoBxPc button{
+    text-decoration: none;
+    outline:none;
+    background-color: none;
+    
+}
+.columna-4 .tarjetaPC .contenidoBxPc .addAndRemoveButton .removeButton{
+    background-color: #ebebeb;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #dddddd;
+    font-weight: 600;
+    font-size: 24px;
+    width: 26px;
+}
+.columna-4 .tarjetaPC .contenidoBxPc .addAndRemoveButton .addButton{
+    background-color: #ebebeb;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid #dddddd;
+    font-weight: 600;
+    font-size: 24px;
+    width: 26px;
+}
+.columna-4 .tarjetaPC .contenidoBxPc p{
+    margin: auto;
+    font-size: 1.1rem;
 }

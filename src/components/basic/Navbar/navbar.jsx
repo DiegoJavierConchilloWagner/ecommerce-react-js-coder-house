@@ -5,7 +5,9 @@ import "./navbar.css"
 
 
 const Navbar = (scrollTop) => {
-    const addToCart = () => alert('Producto agregado al carrito.');
+    // const addToCart = () => alert('Producto agregado al carrito.');
+
+
     //navbar animation 
     let refNav = useRef();
     const handleScroll = () => {
@@ -30,14 +32,14 @@ const Navbar = (scrollTop) => {
     return (
         <nav ref={refNav}>
             <input id="nav-toggle" type="checkbox" />
-            <Link exact to="/"><div className="logo"><strong>PetHouse</strong></div></Link>
+            <Link to="/"><div className="logo"><strong>PetHouse</strong></div></Link>
             <ul className="links">
                 <li><NavLink exact to="/" activeClassName="active">Inicio</NavLink></li>
                 <li><NavLink exact to="/productos" activeClassName="active">Productos</NavLink></li>
                 <li><NavLink exact to="/preguntas" activeClassName="active">Preguntas</NavLink></li>
                 <li><NavLink exact to="/nosotros" activeClassName="active">Nosotros</NavLink></li>
                 <li><NavLink exact to="/contacto" activeClassName="active">Contacto</NavLink></li>
-                <Cart addToCart={addToCart}/>
+                <Cart />
             </ul>
             <label htmlFor="nav-toggle" className="icon-burger">
                 <div className="line" />

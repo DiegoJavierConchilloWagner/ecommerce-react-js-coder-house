@@ -1,9 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, } from 'react'
 import ItemList from "./itemList"
 import Spinner from 'react-bootstrap/Spinner'
 import 'bootstrap/dist/css/bootstrap.css';
+// import { CartContext } from '../../context/CartContext';
 
 export const ItemListContainer = () => {
+
+
+    
     const [items, setItems] = useState([]);
     useEffect(() => {
         // setTimeout(function(){ 
@@ -32,9 +36,10 @@ export const ItemListContainer = () => {
         getItems("https://diegojavierconchillowagner.github.io/Json/js/data.json");
         
     }, []);
-
+    
     return (
         <>
+
             {items.length === 0 ? (
                 <Spinner animation="border" role="status">
                     <span className="visually-hidden">Loading...</span>
