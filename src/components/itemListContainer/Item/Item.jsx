@@ -5,16 +5,19 @@ import { CartContext } from '../../../context/CartContext';
 import ItemCount from '../../count/ItemCount';
 const Item = ({ id,cat,name,img,price,cantidad }) => {
 
-    const {pushItems} = useContext(CartContext)
-    const handleAlCarrito = () =>{
+    const {pushItems,contador,removeItems} = useContext(CartContext)
+    const handleAlCarrito = (cantidad) =>{
         pushItems({
             id,
             cat,
             name,
             img,
             price,
-            cantidad
+            cantidad,
+            contador
+            // stockElegido
         })
+        
     }
     
 
@@ -36,8 +39,9 @@ const Item = ({ id,cat,name,img,price,cantidad }) => {
                     </div>
                     <h2 className="precioPc">${price}</h2>
                     <ItemCount cantidad={cantidad}/>
+                    <p className="removeItems--temp" onClick={()=> removeItems(id)}>eliminar</p>
                     <Link to={`/productos-detalle?id=${id}`}><small>Ver Detalle</small></Link>
-                    <a className="comprarPc" href="#?" onClick={()=> handleAlCarrito()}>Comprar!</a>
+                    <a className="comprarPc" href="#?" onClick={()=> handleAlCarrito(cantidad)}>Comprar!</a>
                 </div>
             </div>
         </div>

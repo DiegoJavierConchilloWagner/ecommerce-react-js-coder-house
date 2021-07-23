@@ -1,24 +1,39 @@
-import React,{ createContext ,useContext, useState} from 'react'
+import React,{ createContext ,useContext, useState,useEffect} from 'react'
 
 export const CartContext = createContext('')
 export const useCartContext = () => useContext(CartContext)
 
 export const CartPrivider = ({children}) => {
+    //cart Items
     const [cart, setCart] = useState([])
-    const [cartNumber, setCartNumber] = useState(0);
+    //Cart Number
+    const [cartNumber, setCartNumber] = useState(cart.length);
+    //Contador Items
     const [contador, setContador] = useState(1);
-
+    
+    //agregar productos
     const pushItems = (item) =>{
         setCart([...cart,item])
-        setCartNumber(cartNumber + 1) 
     }
-    // const aumentar = () => cantidad < 10 && setContador(contador + 1)como puedo hacer para realizarlo con cantidad? que seria la del stock del objeto
-    const aumentar = () => contador < 10 && setContador(contador + 1) 
-    const disminuir = () => contador > 1 && setContador(contador -1) 
+    //remover productos
+    const removeItems = (id) =>{
+        setCart(cart.filter (prod => prod.id !== id))
+    }
+    //cartNumber
+    useEffect(() => {
+        setCartNumber(cart.length)
+    }, [cart.length]);
+
+    // const totalCarrito = () =>{
+    //     return cart.reduce((acc, prod) => acc + (prod.precio * prod.cantidad),0)
+    // }
+    // const cantidadCarrito = () =>{
+    //     return cart.reduce ((acc, prod) => acc + prod.cantidad,0)
+    // }
     console.log(cart)
     return (
         <>
-            <CartContext.Provider value={{cart,pushItems,cartNumber,aumentar,disminuir,contador}}>
+            <CartContext.Provider value={{cart,pushItems,cartNumber,removeItems,contador,setContador}}>
                 {children}
             </CartContext.Provider> 
         </>

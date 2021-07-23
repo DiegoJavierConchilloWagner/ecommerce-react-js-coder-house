@@ -172,3 +172,7 @@ span.boton{
   font-weight: 200;
   font-style: normal;
 }
+.noProducts{
+  text-align: center;
+  margin-bottom: 40px;
+}

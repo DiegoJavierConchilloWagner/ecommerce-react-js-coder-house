@@ -1,6 +1,8 @@
-import React,{} from 'react'
-
+import React,{useContext} from 'react'
+import { CartContext } from '../../../../context/CartContext'
 const VisualCart = ( ) => {
+    const { cart } = useContext(CartContext)
+
     return (
         <>
             <div className="carritoRender">
@@ -16,6 +18,11 @@ const VisualCart = ( ) => {
                     </div>
                 </div>
                 {/* fin seccion fija del carrito  */}
+                {cart.length === 0 && (
+                    <div className="noProducts">
+                        <p>Ups! Aun no has agregado productos al carrito...</p>
+                    </div>
+                )}
                 {/* articulos del carrito */}
                 <div className="articulos" id="cart-container">
 

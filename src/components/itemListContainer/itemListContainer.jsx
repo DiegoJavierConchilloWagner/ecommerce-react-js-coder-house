@@ -39,7 +39,6 @@ export const ItemListContainer = () => {
     
     return (
         <>
-
             {items.length === 0 ? (
                 <Spinner animation="border" role="status">
                     <span className="visually-hidden">Loading...</span>

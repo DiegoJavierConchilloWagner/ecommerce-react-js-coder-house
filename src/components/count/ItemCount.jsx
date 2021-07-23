@@ -2,11 +2,12 @@ import React , {useContext} from 'react';
 import "./count.css";
 import { CartContext } from '../../context/CartContext';
 const ItemCount = ({cantidad}) => {
-    const {aumentar,disminuir,contador} = useContext(CartContext)
-    // const [contador, setContador] = useState(1);
 
-    // const aumentar = () => contador < cantidad && setContador(contador + 1) 
-    // const disminuir = () => contador > 1 && setContador(contador -1) 
+    const {contador, setContador} = useContext(CartContext)
+    // const [contador, setContador] = useState(1);
+    
+    const aumentar = () => contador < cantidad && setContador(contador + 1) 
+    const disminuir = () => contador > 1 && setContador(contador -1) 
         
 
     return (

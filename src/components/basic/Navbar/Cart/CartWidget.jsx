@@ -1,13 +1,14 @@
 import React,{useRef,useContext} from "react";
-import VisualCart from "./VisualCart";
 import { CartContext } from "../../../../context/CartContext";
 // import { CartContext } from '../../../context/CartContext';
 import "../navbar.css"
 import "./VisualCart.css"
+import NavCart from "./NavCart";
 
 
 const Cart = () => {
     const {cartNumber} = useContext(CartContext)
+
     let myCart = useRef()
     //  menu carrito desplegable
     const openNav = () => {
@@ -18,9 +19,7 @@ const Cart = () => {
             myCart.current.style.width = "500px";
         }
     }
-    const closeNav = () => {
-        myCart.current.style.width = "0";
-    }
+   
      ///////////////////////////////
     return (
         <>
@@ -34,12 +33,7 @@ const Cart = () => {
                 </div>
             </li>
             {/* seccion que se despliega de la derecha */}
-            <section className="carrito">
-                <div ref={myCart} className="visualCart">
-                    <a href="#?" className="closebtn" onClick={closeNav}>×</a>
-                    <VisualCart />
-                </div>
-            </section>
+            <NavCart myCart={myCart}/>
         </>
     )
 };
