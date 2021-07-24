@@ -1,7 +1,6 @@
-import React,{ createContext ,useContext, useState,useEffect} from 'react'
+import React,{createContext,useState,useEffect} from 'react'
 
-export const CartContext = createContext('')
-export const useCartContext = () => useContext(CartContext)
+export const CartContext = createContext()
 
 export const CartPrivider = ({children}) => {
     //cart Items
@@ -9,7 +8,7 @@ export const CartPrivider = ({children}) => {
     //Cart Number
     const [cartNumber, setCartNumber] = useState(cart.length);
     //Contador Items
-    const [contador, setContador] = useState(1);
+    // const [contador, setContador] = useState(1);
     
     //agregar productos
     const pushItems = (item) =>{
@@ -30,10 +29,13 @@ export const CartPrivider = ({children}) => {
     // const cantidadCarrito = () =>{
     //     return cart.reduce ((acc, prod) => acc + prod.cantidad,0)
     // }
+    
+    //valores globales
+    const data = {cart,pushItems,cartNumber,removeItems}
     console.log(cart)
     return (
         <>
-            <CartContext.Provider value={{cart,pushItems,cartNumber,removeItems,contador,setContador}}>
+            <CartContext.Provider value={data}>
                 {children}
             </CartContext.Provider> 
         </>
