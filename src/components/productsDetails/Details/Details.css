@@ -1,0 +1,37 @@
+.columna-2M .addAndRemoveButton{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.columna-2M button{
+    text-decoration: none;
+    outline:none;
+    background-color: none;
+    
+}
+.columna-2M .addAndRemoveButton .removeButton{
+    background-color: #ebebeb;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #dddddd;
+    font-weight: 600;
+    font-size: 24px;
+    width: 26px;
+}
+.columna-2M .addAndRemoveButton .addButton{
+    background-color: #ebebeb;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid #dddddd;
+    font-weight: 600;
+    font-size: 24px;
+    width: 26px;
+}
+.columna-2Mc p{
+    margin: auto;
+    font-size: 1.1rem;
+}
+.removeItems--temp{
+    cursor: pointer;
+}

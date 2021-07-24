@@ -142,7 +142,7 @@ color: #870f94;
     color: #870f94;
     transition: all 0.3s ease-in-out;
 }
-.columna-4 .tarjetaPC .contenidoBxPc .addAndRemoveButton{
+/* .columna-4 .tarjetaPC .contenidoBxPc .addAndRemoveButton{
     display: flex;
     justify-content: space-between;
     height: 40px;
@@ -178,4 +178,4 @@ color: #870f94;
 }
 .removeItems--temp{
     cursor: pointer;
-}
+} */

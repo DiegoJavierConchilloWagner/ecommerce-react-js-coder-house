@@ -2,22 +2,10 @@ import React,{useContext} from 'react'
 import { Link } from "react-router-dom";
 import "./Items.css"
 import { CartContext } from '../../../context/CartContext';
-import ItemCount from '../../count/ItemCount';
 
 const Item = ({ id,cat,name,img,price,cantidad,contador }) => {
-    const {pushItems,removeItems} = useContext(CartContext)
+    const {handlePushItems} = useContext(CartContext)
 
-    const handlePushItems = (cantidad) =>{
-        pushItems({
-            id,
-            cat,
-            name,
-            img,
-            price,
-            cantidad,
-            contador// stockElegido
-        })
-    }
     return (
         <div className={`columna-4 ${cat}`}>
             <div className="tarjetaPC">
@@ -34,10 +22,10 @@ const Item = ({ id,cat,name,img,price,cantidad,contador }) => {
                         <i className="fa fa-star"></i>
                     </div>
                     <h2 className="precioPc">${price}</h2>
-                    <ItemCount cantidad={cantidad} />
-                    <p className="removeItems--temp" onClick={()=> removeItems(id)}>eliminar</p>
+                    
+                    {/* <p className="removeItems--temp" onClick={()=> removeItems(id)}>eliminar</p> */}
                     <Link to={`/productos-detalle?id=${id}`}><small>Ver Detalle</small></Link>
-                    <a className="comprarPc" href="#?" onClick={()=> handlePushItems(cantidad)}>Comprar!</a>
+                    <a className="comprarPc" href="#?" onClick={()=> handlePushItems(id,cat,name,img,price,cantidad,contador)}>Comprar!</a>
                 </div>
             </div>
         </div>
